@@ -1,0 +1,41 @@
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myChart"></canvas>
+    <div id="app"></div>
+
+    <button onclick="showSth()">Click me</button>
+
+    https://bit.ly/ek_discord
+    
+</body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+
+const ctx = document.getElementById('myChart');
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Tomato', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+      datasets: [{
+        label: '# of Votes',
+        data: [12, 19, 3, 5, 2, 3],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+   function showSth(){
+    document.getElementById("app").innerText="app";
+
+   }
+</script>
+</html>
